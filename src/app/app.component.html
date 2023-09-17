@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="form-control">
+  <select
+    class="form-select"
+    id="numeros"
+    aria-label="Default select example"
+    (change)="mostrarTabla($event)"
+  >
+    <option selected>Selecione la tabla que desea ver</option>
+    <option *ngFor="let n of multi">
+      {{ n }}
+    </option>
+  </select>
+
+
+  <div class="contenedor">
+    <h5>Resultados</h5>
+    <div class="row">
+      <p id = "mostrarTabla">{{ mostrar }}</p>
+    </div>
+
+  </div>
+</div>
